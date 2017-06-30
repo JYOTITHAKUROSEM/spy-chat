@@ -1,13 +1,14 @@
+
 from function import send_message
 from function import read_message
-from Spydetail import friends,spy
-from function import add_status,start_chat
-from Addfriend import add_friend
+from function import read_chat_history
+from function import add_status,start_chat,add_friend
+from Spydetail import Spy,spy,ChatMessage,friends
 print "Hello! Let\'s get started"
 question =( "Do you want to continue with default user (Y/N)? ")
 existing = raw_input(question)
 if (existing == "Y"):
-   start_chat(spy['name'],spy['age'],spy['rating'])
+   start_chat(spy)
 else:
     spy_name = raw_input("welcome to spy chat,tell me your name first")
     if len(spy_name) > 0:
